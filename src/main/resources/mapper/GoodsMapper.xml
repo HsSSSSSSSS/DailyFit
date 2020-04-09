@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xmut.graduate.dailyfit.dao.GoodsDao">
+    <!--查询所有商品-->
+    <select id="findByAllGoods" resultType="xmut.graduate.dailyfit.pojo.Goods">
+      select
+        goods_id as goodsId,
+        goods_name as goodsName,
+        goods_price as goodsPrice,
+        goods_introduce as goodsIntroduce,
+        goods_img1 as goodsImg1,
+        goods_img2 as goodsImg2,
+        goods_img3 as goodsImg3,
+        goods_img4 as goodsImg4,
+        goods_img5 as goodsImg5
+      from
+        goods
+   </select>
+    <!--根据goodsId查找商品-->
+    <select id="findGoodsById" parameterType="java.lang.Integer" resultType="xmut.graduate.dailyfit.pojo.Goods">
+        select
+        goods_id as goodsId,
+        goods_name as goodsName,
+        goods_price as goodsPrice,
+        goods_introduce as goodsIntroduce,
+        goods_img1 as goodsImg1,
+        goods_img2 as goodsImg2,
+        goods_img3 as goodsImg3,
+        goods_img4 as goodsImg4,
+        goods_img5 as goodsImg5
+        from
+        goods
+        where goods_id = #{goodsId}
+    </select>
+    <!--添加商品-->
+    <insert id="addGoods" parameterType="xmut.graduate.dailyfit.pojo.Goods">
+        INSERT INTO goods (goods_name,goods_price,goods_introduce,goods_img1,goods_img2,goods_img3,goods_img4,goods_img5)
+        VALUES (#{goodsName},#{goodsPrice},#{goodsIntroduce},#{goodsImg1},#{goodsImg2},#{goodsImg3},#{goodsImg4},#{goodsImg5})
+    </insert>
+</mapper>
