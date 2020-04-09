@@ -32,7 +32,7 @@ public class GoodsController {
     public Map<String,Object> findGoodsById(Integer goodsId) {
         Map<String,Object> modelMap = new HashMap<>();
         Goods goods = goodsService.findGoodsById(goodsId);
-        modelMap.put("goodsDetail",goods);
+        modelMap.put("goodsDetail",goods) ;
         return modelMap;
     }
 }
