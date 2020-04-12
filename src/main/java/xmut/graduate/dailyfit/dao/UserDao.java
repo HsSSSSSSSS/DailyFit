@@ -15,4 +15,9 @@ public interface UserDao {
     List<User> findByAllUser();
 
     User adminLogin(String username,String password);
+
+    //添加用户
+    int insertUser(User user);
+
+    Integer findIdByName(String username);
 }

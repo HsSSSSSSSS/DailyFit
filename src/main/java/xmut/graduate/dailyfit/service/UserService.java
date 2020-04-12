@@ -9,4 +9,8 @@ public interface UserService {
 
     User adminLogin(String username, String password);
 
+    boolean insertUser(User user);
+
+    Integer findIdByName(String username);
+
 }

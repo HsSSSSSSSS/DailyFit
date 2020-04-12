@@ -10,4 +10,18 @@
     <select id="adminLogin" resultType="xmut.graduate.dailyfit.pojo.User" parameterType="xmut.graduate.dailyfit.pojo.User">
         SELECT username,password FROM users WHERE username = #{username} AND password = #{password}
     </select>
+    <insert id="insertUser" parameterType="xmut.graduate.dailyfit.pojo.User">
+        INSERT INTO users (username,img,addr)
+        VALUES (#{username},#{img},#{addr})
+    </insert>
+    <!--通过username查询id-->
+    <select id="findIdByName" parameterType="java.lang.String" resultType="java.lang.Integer">
+        select
+        uid
+        from
+        users
+        where
+        username = #{username}
+
+    </select>
 </mapper>

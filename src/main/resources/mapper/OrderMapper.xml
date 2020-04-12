@@ -3,6 +3,19 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="xmut.graduate.dailyfit.dao.OrderDao">
-
-
+    <insert id="insertOrder" parameterType="xmut.graduate.dailyfit.pojo.Order">
+        INSERT INTO orders (uid,order_price,creat_time)
+        VALUES (#{uid},#{orderPrice},#{createTime})
+    </insert>
+    <select id="findAllById" parameterType="java.lang.Integer" resultType="xmut.graduate.dailyfit.pojo.Order">
+        select
+        order_id as orderId,
+        uid,
+        order_price as orderPrice,
+        order_pay as orderPay,
+        is_send as isSend,
+        creat_time as createTime
+        from  orders
+        where uid = #{uid}
+    </select>
 </mapper>
