@@ -3,18 +3,18 @@ package xmut.graduate.dailyfit.pojo;
 public class Motion {
     private int mid;
     private String source;
-    private String level;
+    private String levelNum;
     private String sort;
-    private String motion_title;
+    private String motionTitle;
 
     @Override
     public String toString() {
         return "Motion{" +
                 "mid=" + mid +
                 ", source='" + source + '\'' +
-                ", level='" + level + '\'' +
+                ", levelNum='" + levelNum + '\'' +
                 ", sort='" + sort + '\'' +
-                ", motion_title='" + motion_title + '\'' +
+                ", motionTitle='" + motionTitle + '\'' +
                 '}';
     }
 
@@ -34,12 +34,12 @@ public class Motion {
         this.source = source;
     }
 
-    public String getLevel() {
-        return level;
+    public String getLevelNum() {
+        return levelNum;
     }
 
-    public void setLevel(String level) {
-        this.level = level;
+    public void setLevelNum(String levelNum) {
+        this.levelNum = levelNum;
     }
 
     public String getSort() {
@@ -50,11 +50,11 @@ public class Motion {
         this.sort = sort;
     }
 
-    public String getMotion_title() {
-        return motion_title;
+    public String getMotionTitle() {
+        return motionTitle;
     }
 
-    public void setMotion_title(String motion_title) {
-        this.motion_title = motion_title;
+    public void setMotionTitle(String motionTitle) {
+        this.motionTitle = motionTitle;
     }
 }

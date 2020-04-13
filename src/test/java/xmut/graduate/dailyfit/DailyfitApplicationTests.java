@@ -3,13 +3,11 @@ package xmut.graduate.dailyfit;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import xmut.graduate.dailyfit.dao.MotionDao;
 import xmut.graduate.dailyfit.dao.OrderDao;
-import xmut.graduate.dailyfit.pojo.Goods;
-import xmut.graduate.dailyfit.pojo.Order;
-import xmut.graduate.dailyfit.pojo.User;
-import xmut.graduate.dailyfit.service.GoodsService;
-import xmut.graduate.dailyfit.service.OrderService;
-import xmut.graduate.dailyfit.service.UserService;
+import xmut.graduate.dailyfit.dao.PlanDao;
+import xmut.graduate.dailyfit.pojo.*;
+import xmut.graduate.dailyfit.service.*;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -30,6 +28,12 @@ class DailyfitApplicationTests {
 
     @Autowired
     private OrderDao orderDao;
+
+    @Autowired
+    private MotionService motionService;
+
+    @Autowired
+    private PlanService planService;
 
     @Test
     void contextLoads() {
@@ -88,6 +92,24 @@ class DailyfitApplicationTests {
 //        System.out.println(orders);
         List<Order> orders = orderDao.findAllById(12);
         System.out.println(orders);
+    }
+
+    @Test
+    void findMotionBySort(){
+        List<Motion> motions = motionService.findMotionBySort("塑性","臀腿");
+        System.out.println(motions);
+    }
+    @Test
+    void insertPlan(){
+        Plan plan = new Plan();
+        plan.setMid1(6);
+        plan.setMid2(7);
+        plan.setMid3(8);
+        plan.setMid4(9);
+        plan.setMid5(10);
+        plan.setFate(22);
+        plan.setWeek(11);
+        planService.insertPlan("Hs-",plan);
     }
 
 }
