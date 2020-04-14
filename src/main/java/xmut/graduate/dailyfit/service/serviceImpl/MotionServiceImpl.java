@@ -18,7 +18,7 @@ public class MotionServiceImpl implements MotionService {
     @Override
     public List<Motion> findMotionBySort(String type, String sort) {
         List<Motion> motions = new ArrayList<>();
-        if(type == "塑性"){
+        if(type == "塑形"){
             motions = motionDao.findMotionBySortDuctility(sort);
         }else{
             motions = motionDao.findMotionBySortWeight(sort);

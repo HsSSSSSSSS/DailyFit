@@ -5,6 +5,6 @@
 <mapper namespace="xmut.graduate.dailyfit.dao.PlanDao">
     <insert id="insertPlan" parameterType="xmut.graduate.dailyfit.pojo.Plan">
          INSERT INTO plan (mid1,mid2,mid3,mid4,mid5,fate,week,uid)
-        VALUES (#{mid1},#{mid2},#{mid3},#{mid4},#{mid5},#{fate},#{week},#{uid})
+        VALUES (#{mid1},#{mid2},#{mid3},#{mid4},#{mid5},#{fate},#{weekNum},#{uid})
     </insert>
 </mapper>

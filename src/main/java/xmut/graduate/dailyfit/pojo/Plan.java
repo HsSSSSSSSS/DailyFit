@@ -7,8 +7,8 @@ public class Plan {
     private Integer mid3;
     private Integer mid4;
     private Integer mid5;
-    private Integer fate;
-    private Integer week;
+    private String fate;
+    private Integer weekNum;
     private Integer uid;
 
     @Override
@@ -21,80 +21,80 @@ public class Plan {
                 ", mid4=" + mid4 +
                 ", mid5=" + mid5 +
                 ", fate=" + fate +
-                ", week=" + week +
+                ", weekNum=" + weekNum +
                 ", uid=" + uid +
                 '}';
     }
 
-    public int getUid() {
-        return uid;
-    }
-
-    public void setUid(int uid) {
-        this.uid = uid;
-    }
-
-    public int getPid() {
+    public Integer getPid() {
         return pid;
     }
 
-    public void setPid(int pid) {
+    public void setPid(Integer pid) {
         this.pid = pid;
     }
 
-    public int getMid1() {
+    public Integer getMid1() {
         return mid1;
     }
 
-    public void setMid1(int mid1) {
+    public void setMid1(Integer mid1) {
         this.mid1 = mid1;
     }
 
-    public int getMid2() {
+    public Integer getMid2() {
         return mid2;
     }
 
-    public void setMid2(int mid2) {
+    public void setMid2(Integer mid2) {
         this.mid2 = mid2;
     }
 
-    public int getMid3() {
+    public Integer getMid3() {
         return mid3;
     }
 
-    public void setMid3(int mid3) {
+    public void setMid3(Integer mid3) {
         this.mid3 = mid3;
     }
 
-    public int getMid4() {
+    public Integer getMid4() {
         return mid4;
     }
 
-    public void setMid4(int mid4) {
+    public void setMid4(Integer mid4) {
         this.mid4 = mid4;
     }
 
-    public int getMid5() {
+    public Integer getMid5() {
         return mid5;
     }
 
-    public void setMid5(int mid5) {
+    public void setMid5(Integer mid5) {
         this.mid5 = mid5;
     }
 
-    public int getFate() {
+    public String getFate() {
         return fate;
     }
 
-    public void setFate(int fate) {
+    public void setFate(String fate) {
         this.fate = fate;
     }
 
-    public int getWeek() {
-        return week;
+    public Integer getWeekNum() {
+        return weekNum;
     }
 
-    public void setWeek(int week) {
-        this.week = week;
+    public void setWeekNum(Integer weekNum) {
+        this.weekNum = weekNum;
+    }
+
+    public Integer getUid() {
+        return uid;
+    }
+
+    public void setUid(Integer uid) {
+        this.uid = uid;
     }
 }

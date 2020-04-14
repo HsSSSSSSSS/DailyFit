@@ -107,8 +107,6 @@ class DailyfitApplicationTests {
         plan.setMid3(8);
         plan.setMid4(9);
         plan.setMid5(10);
-        plan.setFate(22);
-        plan.setWeek(11);
         planService.insertPlan("Hs-",plan);
     }
 
