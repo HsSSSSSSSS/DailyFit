@@ -45,7 +45,7 @@
         goods_name as goodsName,
         goods_price as goodsPrice,
         goods_introduce as goodsIntroduce,
-        goods_img   1 as goodsImg1,
+        goods_img  as goodsImg1,
         goods_img2 as goodsImg2,
         goods_img3 as goodsImg3,
         goods_img4 as goodsImg4,
