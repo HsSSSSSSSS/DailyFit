@@ -20,6 +20,11 @@ public class GoodsServiceImpl implements GoodsService {
     }
 
     @Override
+    public List<Goods> findGoodsByAsc() {
+        return goodsDao.findGoodsByAsc();
+    }
+
+    @Override
     public void addGoods(Goods goods) {
         goodsDao.addGoods(goods);
     }

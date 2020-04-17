@@ -25,4 +25,14 @@
         where sort = #{sort}
         and  level_num in(4,5);
     </select>
+    <select id="findMotionByMid" parameterType="java.lang.Integer" resultType="xmut.graduate.dailyfit.pojo.Motion">
+        select
+        mid,
+        source,
+        level_num as levelNum,
+        sort,
+        motion_title as motionTitle
+        from motion
+        where mid = #{mid}
+    </select>
 </mapper>

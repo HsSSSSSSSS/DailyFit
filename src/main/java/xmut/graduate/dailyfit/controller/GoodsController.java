@@ -28,6 +28,14 @@ public class GoodsController {
         return modelMap;
     }
 
+    @RequestMapping(value = "/goodsAsc",method = RequestMethod.GET)
+    public Map<String,Object> findGoodsByAsc() {
+        Map<String,Object> modelMap = new HashMap<>();
+        List<Goods> goods = goodsService.findGoodsByAsc();
+        modelMap.put("goodsList",goods);
+        return modelMap;
+    }
+
     @RequestMapping(value = "/detail",method = RequestMethod.GET)
     public Map<String,Object> findGoodsById(Integer goodsId) {
         Map<String,Object> modelMap = new HashMap<>();

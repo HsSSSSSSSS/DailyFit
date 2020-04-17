@@ -10,6 +10,8 @@ public class Plan {
     private String fate;
     private Integer weekNum;
     private Integer uid;
+    private String definition;
+    private Integer totalFate;
 
     @Override
     public String toString() {
@@ -20,10 +22,28 @@ public class Plan {
                 ", mid3=" + mid3 +
                 ", mid4=" + mid4 +
                 ", mid5=" + mid5 +
-                ", fate=" + fate +
+                ", fate='" + fate + '\'' +
                 ", weekNum=" + weekNum +
                 ", uid=" + uid +
+                ", definition='" + definition + '\'' +
+                ", totalFate=" + totalFate +
                 '}';
+    }
+
+    public Integer getTotalFate() {
+        return totalFate;
+    }
+
+    public void setTotalFate(Integer totalFate) {
+        this.totalFate = totalFate;
+    }
+
+    public String getDefinition() {
+        return definition;
+    }
+
+    public void setDefinition(String definition) {
+        this.definition = definition;
     }
 
     public Integer getPid() {

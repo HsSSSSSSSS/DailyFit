@@ -9,6 +9,8 @@ public interface GoodsService {
 
     List<Goods> findByAllGoods();
 
+    List<Goods> findGoodsByAsc();
+
     void addGoods(Goods goods);
 
     Goods findGoodsById(Integer goodsId);

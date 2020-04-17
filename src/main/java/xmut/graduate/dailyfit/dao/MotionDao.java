@@ -12,4 +12,6 @@ public interface MotionDao {
 
     List<Motion> findMotionBySortWeight(String sort);
 
+    Motion findMotionByMid(Integer mid);
+
 }

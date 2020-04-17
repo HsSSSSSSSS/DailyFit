@@ -10,6 +10,7 @@ import xmut.graduate.dailyfit.pojo.*;
 import xmut.graduate.dailyfit.service.*;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -110,4 +111,23 @@ class DailyfitApplicationTests {
         planService.insertPlan("Hs-",plan);
     }
 
+    @Test
+    void findDefinition(){
+        boolean check = planService.findDefinitionByUsername("Hs-","定制");
+        System.out.println(check);
+    }
+
+    @Test
+    void findPlanList(){
+        List<Plan> planList = new ArrayList<>();
+        planList =  planService.findAllByUsername("Hs-");
+        System.out.println(planList);
+    }
+
+    @Test
+    void findMidByPid(){
+        List<Motion> motions = planService.findMotionBypid(16);
+        System.out.println(motions);
+
+    }
 }
